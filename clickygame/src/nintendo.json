@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "image": "bowser.png"
+    },
+    {
+        "id": 2,
+        "image": "donkeykong.png"
+    },
+    {
+        "id": 3,
+        "image": "kirby.png"
+    },
+    {
+        "id": 4,
+        "image": "link.png"
+    },
+    {
+        "id": 5,
+        "image": "peach.png"
+    },
+    {
+        "id": 6,
+        "image": "starfox.png"
+    },
+    {
+        "id": 7,
+        "image": "wario.png"
+    },
+    {
+        "id": 8,
+        "image": "yoshi.png"
+    }
+]
