@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
+import ScoreBoard from "./components/ScoreBoard";
 import Jumbotron from "./components/Jumbotron";
 import FriendCard from "./components/FriendCard";
 import Footer from "./components/Footer";
@@ -10,11 +11,13 @@ class App extends Component {
   state = {
     nintendo,
     clickednintendo: [],
-    score: 0
+    score: 0,
+    topScore: 0
   }
 
-  imageclick = events => {
-    const currentnintendo = Event.target.alt;
+  imageClick = id => {
+    const currentnintendo = id;
+    console.log(currentnintendo);
     const nintendoalreadyclicked =
       this.state.clickednintendo.indexOf(currentnintendo) > -1;
 
@@ -50,13 +53,17 @@ class App extends Component {
           }
         }
       );
+      if (this.state.score > this.state.topScore) {
+        this.setState({topScore: this.state.score});
+      }
     }
   };
 
   render() {
     return (
       <div>
-        <Navbar
+        <Navbar />
+        <ScoreBoard
           score={this.state.score}
         />
         <Jumbotron />
